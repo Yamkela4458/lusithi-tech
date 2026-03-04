@@ -27,7 +27,7 @@ cards.forEach(card => {
 });
 
 // Typing Effect
-    const texts = ["Educational Technology", "Learning Interface Development", "Frontend Development"];
+    const texts = ["Educational Technology", "Foundation Phase Teaching", "Learning Interface Development", "Frontend Development"];
     let count = 0;
     let index = 0;
     let currentText = '';
@@ -70,3 +70,4 @@ form.addEventListener("submit", async e => {
     alert("Message sent successfully!");
   }
 });
+
