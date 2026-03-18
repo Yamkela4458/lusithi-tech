@@ -19,6 +19,6 @@ The aim of this portfolio is to demonstrate how technology can be applied to enh
 - Research-Informed Educational Tools  
 
 ## Tech Stack used:
-HTML
-CSS
+HTML,
+CSS &
 JavaScript  
