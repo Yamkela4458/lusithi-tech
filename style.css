@@ -256,6 +256,17 @@ transform:scale(1.1);
 box-shadow:0 0 15px #ff6200;
 }
 
+/* Experience */
+#experience ul li{
+list-style-position: inside;
+}
+
+/* research */
+#research ul li{
+list-style-position: inside;
+}
+
+
 /* ================================
    TECH STACK
 ================================ */
