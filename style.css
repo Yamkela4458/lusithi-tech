@@ -41,7 +41,7 @@ overflow-x:hidden;
 }
 
 /* ================================
-   FLOATING PARTICLES
+   FLOATING STYLING
 ================================ */
 
 body::before{
@@ -64,6 +64,30 @@ z-index:-1;
 /* ================================
    HEADER
 ================================ */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:#05060a;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.spinner{
+width:60px;
+height:60px;
+border:6px solid rgba(255,255,255,0.1);
+border-top:6px solid #ff6a00;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
 
 header{
 text-align:center;
@@ -71,6 +95,14 @@ padding:30px;
 background:rgba(0,0,0,0.5);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(118, 113, 113, 0.1);
+}
+
+.main-header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
 }
 
 /* ================================
@@ -113,6 +145,9 @@ width:100%;
 /* ================================
    HERO
 ================================ */
+#content{
+margin-top:120px;
+}
 
 .contents{
 text-align:center;
@@ -209,6 +244,7 @@ position:relative;
 }
 
 .project-card::before{
+pointer-events:none;
 content:"";
 position:absolute;
 inset:0;
@@ -256,16 +292,128 @@ transform:scale(1.1);
 box-shadow:0 0 15px #ff6200;
 }
 
+/* ================================
+   EDUCATION
+================================ */
+
+#education{
+position:relative;
+overflow:hidden;
+}
+
+/* Container */
+.education-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+position:relative;
+z-index:2;
+}
+
+/* Blocks */
+.edu-block{
+background:rgba(255,255,255,0.04);
+padding:25px;
+border-radius:12px;
+border:1px solid rgba(255,140,0,0.15);
+transition:0.4s;
+}
+
+.edu-block:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 0 25px rgba(255,120,0,0.2);
+}
+
+/* Items */
+.edu-item{
+margin-bottom:20px;
+padding:15px;
+border-radius:8px;
+background:rgba(255,255,255,0.03);
+transition:0.3s;
+}
+
+.edu-item:hover{
+background:rgba(255,120,0,0.08);
+transform:translateX(8px);
+}
+
+.edu-item h4{
+color:#ffae00;
+margin-bottom:5px;
+}
+
+.edu-item a{
+display:inline-block;
+margin-top:8px;
+font-size:0.9rem;
+}
+
+/* ================================
+   FLOATING ICONS
+================================ */
+
+.edu-floating{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:1;
+pointer-events:none;
+}
+
+.edu-floating span{
+position:absolute;
+font-size:28px;
+opacity:0.15;
+animation:floatEdu 10s linear infinite;
+}
+
+/* Positions */
+.edu-floating span:nth-child(1){
+left:10%;
+top:80%;
+animation-duration:12s;
+}
+
+.edu-floating span:nth-child(2){
+left:30%;
+top:90%;
+animation-duration:15s;
+}
+
+.edu-floating span:nth-child(3){
+left:60%;
+top:85%;
+animation-duration:10s;
+}
+
+.edu-floating span:nth-child(4){
+left:80%;
+top:95%;
+animation-duration:18s;
+}
+
+/* Animation */
+@keyframes floatEdu{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:0.2;
+}
+100%{
+transform:translateY(-400px) rotate(360deg);
+opacity:0;
+}
+}
+
 /* Experience */
 #experience ul li{
 list-style-position: inside;
 }
-
-/* research */
-#research ul li{
-list-style-position: inside;
-}
-
 
 /* ================================
    TECH STACK
@@ -439,6 +587,5 @@ gap:12px;
 
 section{
 margin:40px 15px;
-}
-
+}  
 }
