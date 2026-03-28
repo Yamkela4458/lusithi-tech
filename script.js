@@ -25,7 +25,7 @@ cards.forEach(card => {
 });
 
 // Typing Effect //
-const texts = ["English Language Learning", "Foundation Phase Teaching", "Learning Interface Development"];
+const texts = ["Artificial Intelligence", "Prompt Engineering", "Digital Learning Development", "Education Technology (EdTech)"];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -67,6 +67,6 @@ form.addEventListener("submit", async e => {
     alert("Message sent successfully!");
     form.reset();
   } else {
-    alert("Temporarily unavailable, please send me an email using this address 'lusithi.dev@gmail.com'!");
+    alert("Temporarily unavailable, please send me an email using this address 'lusithiyamkela@gmail.com'!");
   }
 });
