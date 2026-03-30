@@ -1,343 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Yamkela Lusithi | Digital Portfolio</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lusithi Yamkela | Portfolio</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-
-<!-- Background Animation -->
-<div class="floating-bg">
-<span style="left:5%; animation-duration:12s;"></span>
-<span style="left:20%; animation-duration:15s;"></span>
-<span style="left:35%; animation-duration:10s;"></span>
-<span style="left:50%; animation-duration:18s;"></span>
-<span style="left:65%; animation-duration:14s;"></span>
-<span style="left:80%; animation-duration:16s;"></span>
-</div>
-
-<!-- Loader -->
-<div id="loader">
-<div class="spinner"></div>
-</div>
-
-<!-- MAIN CONTENT -->
-<div id="content" style="display:none;">
+<!---body --->
+<body class="bg-white text-gray-900">
 
 <!-- HEADER -->
-<header class="main-header">
-
-<div class="heading">
-<img src="icons/Dev logo.png" width="70">
-</div>
-
-<nav class="header">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="education.html">Education</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
+<header id="header" class="fixed top-0 left-0 w-full glass border-b z-50 px-10 py-4 flex justify-between items-center transition-all">
+  <div class="flex items-center gap-3">
+    <div class="logo-box">LY</div>
+    <h1 class="font-semibold text-lg tracking-tight">Lusithi Yamkela</h1>
+  </div>
+  <nav class="space-x-10 text-sm font-medium">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#work" class="nav-link">Work</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="resume.html" class="nav-link">Resume</a>
+  </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h1 class="hero-text">
-    <span>Design</span>
-    <span>Learn</span>
-    <span>Create</span>
-    <span>Innovate</span>
-  </h1>
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+  <h1 id="typing" class="text-5xl md:text-6xl font-semibold mb-6"></h1>
+  <p class="text-lg max-w-2xl mb-8 text-gray-600">
+    I create interactive Learning Interfaces using Digital Learning Tools, AI (prompt engineering), Web Design Tools, and Basic Programming.
+  </p>
+  <button class="text-sm px-8 py-3 rounded-full border border-black hover:bg-black hover:text-white transition">
+    <a href="#work" class="nav-link">View Work</a>
+  </button>
 </section>
 
-<section class="contents">
-
-  <section id="typewriter">
-    <h1>Hello There,</h1>
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6 max-w-5xl mx-auto fade-in">
+  <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div class="bg-gray-50 p-10 rounded-2xl border">
+      <p class="text-base leading-relaxed text-gray-700">
+        My work focuses on the integration of <strong>Digital Learning Tools</strong>, to improve how learners interact with learning.
+        <br><br>
+        Yamkela Lusithi is a Digital Learning Developer, Educational Research Candidate and AI (Artificial Intelligence) in Education Enthusiast 
+        actively involved in the Bachelor of Education(B.Ed.) Honours Research specializing in Language, Literacies and Literature at the University of Johannesburg (Part-Time). 
+        My research work focuses on the intersection of Education, Digital literacy and the ethical use if AI in academic settings, designing technology-enhanced learning interfaces 
+        that improve access to literacy and Education. With a solid background in pedagogy and technology, I develop AI-enhanced learning interfaces, digital learning environments,
+         and research-informed digital education tools. My goal is to ensure that educational technology strengthens teaching practice while improving learner engagement, digital 
+         competence, and academic achievement.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <div class="w-78 h-48 bg-gray-200 rounded-full flex items-center justify-center text-gray-500"> 
+        <img src="images/Professional.png">
+        <style>
+            img{
+                border-radius: 50%;
+            }
+        </style>
+      </div>
+    </div>
+  </div>
 </section>
 
 
+<!-- TOOLS / TECH STACK -->
+<section class="py-20 overflow-hidden bg-white fade-in">
+  <h2 class="text-2xl font-semibold text-center mb-12">Tools & Technologies</h2>
+
+  <div class="relative w-full overflow-hidden">
+    <div class="flex gap-12 animate-marquee whitespace-nowrap">
+      <!-- Tool Items -->
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 mb-2" />HTML
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 mb-2" />CSS
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 mb-2" />JavaScript
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 mb-2" />Git
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 mb-2" />GitHub
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" class="w-12 mb-2" />OpenAI
+      </div>
+
+      <!-- loop -->
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 mb-2" />HTML
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 mb-2" />CSS
+      </div>
+      <div class="flex flex-col items-center text-sm">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 mb-2" />JavaScript
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
 </style>
-<h1>This is <span><strong>Yamkela Lusithi</strong></span></h1>
 
-<h2 class="role">
-Digital Learning Developer
-</h2>
-
-<header>
-<h1 id="typing"></h1>
-</header>
-
-<h2>
- Developing skills in digital learning, AI, and web development, 
- with a focus on creating tools that support literacy and meaningful learning.
-</h2>
-</section>
-
-<!--- Technical Skills-->
-<section class="technical-skills">
-  <h2>Tools I play with:</h2>
-  <div class="skills-marquee">
-    <ul class="skills-list left-to-right">
-      <li><img src="icons/Google_Classroom_Logo.svg.png"><span>Google Classroom</span></li>
-      <li><img src="icons/quizlet.webp"><span>Quizlet</span></li>
-      <li><img src="icons/Teams.jpg"><span>Ms Teams</span></li>
-      <li><img src="icons/canvas.png"><span>Canvas</span></li>
-      <li><img src="icons/AI.jpg"><span>AI Tools</span></li>
-      <li><img src="icons/adobe-captivate.jpg"><span>Adobe Captivate</span></li>
-      <li><img src="icons/adobe-xd.jpg"><span>Adobe XD</span></li>
-      <li><div class="tool"><i class="devicon-figma-plain colored"></i><span>Figma</span></div></li>
-      <li><div class="tool"><i class="devicon-canva-plain colored"></i><span>Canva</span></div></li>
-      <li><div class="tool"><i class="devicon-moodle-plain colored"></i><span>LMS</span></div></li>
-    </ul>
-
-    <ul class="skills-list right-to-left">
-      <li><img src="icons/HTML5_logo_and_wordmark.svg.png"><span>HTML5</span></li>
-      <li><img src="icons/css_plain_wordmark_logo_icon_146574.png"><span>CSS3</span></li>
-      <li><img src="icons/Unofficial_JavaScript_logo_2.svg.png"><span>JavaScript (ES6+)</span></li>
-      <li><img src="icons/VS Code.jpg"><span>VS Code</span></li>
-      <li><img src="icons/GitHub-logo.png"><span>GitHub</span></li>
-      <li><img src="icons/git.png"><span>Git</span></li>
-      <li><img src="icons/WCAG-1.png"><span>Accessibility (WCAG)</span></li>
+<!-- SERVICES -->
+<section class="py-24 px-6 fade-in">
+  <h2 class="text-2xl font-semibold text-center mb-12">Capabilities</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <div class="p-6 rounded-xl border card-hover">
+      <h3 class="font-medium mb-2">EdTech Tools</h3>
+      <p class="text-sm text-gray-600">Articulate 360, Adobe Captivate, Moodle(LMS), Google Classroom, Zoom, Microsoft Teams</p>
+    </div>
+    <div class="p-6 rounded-xl border card-hover">
+      <h3 class="font-medium mb-2">Development & Design</h3>
+      <p class="text-sm text-gray-600">HTML, CSS, JavaScript, Full-Stack Development Principles, Figma, Canva, UI/UX Design for Education</p>
+    </div>
+    <div class="p-6 rounded-xl border card-hover">
+      <h3 class="font-medium mb-2">AI Integration</h3>
+      <p class="text-sm text-gray-600">AI Fluency Framework, Prompt Engineering, AI-supported learning design</p>
+    </div>
+    <div class="p-6 rounded-xl border card-hover">
+      <h3 class="font-medium mb-2">Research</h3>
+      <p class="text-sm text-gray-600">Digital literacy frameworks (Multimodal Learning Framework, New Literacies Theory)</p>
+    </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<!-- WORK -->
+<section id="work" class="py-24 px-6 fade-in">
+  <h2 class="text-2xl font-semibold text-center mb-12">Selected Projects</h2>
 
-<h1>Featured Projects</h1>
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
-<div class="project-grid">
+         <!-- Project 1 -->
+    <div class="p-6 border rounded-xl card-hover">
+       <img src="images/Screenshot 2026-01-12 043102.png" width="290" class="rounded-lg mb-4">
+      <h3 class="font-medium mb-2">Practical English Communication Course</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Designed a structured English communication course for adult learners focusing on real-world workplace communication and scenario-based language practice.
+      </p>
+      <ul class="text-sm text-gray-500 space-y-1">
+        <li>• Developed structured modules using Articulate Rise 360.</li>
+        <li>• Applied adult learning principles in course design.</li>
+        <li>• Created UI prototypes and visual layouts using Figma.</li>
+      </ul>
+      <a href="https://share.articulate.com/xB0JcyUqGdLjsUMZyzQOU" target="_blank" class="text-sm underline">View</a>
+    </div>
 
-<!-- Project 1 -->
+    <!-- Project 2 -->
+    <div class="p-6 border rounded-xl card-hover">
+      <img src="images/a8c6d68283173700c80254d1e16018ab.jpg" width="200" class="rounded-lg mb-4">
+      <h3 class="font-medium mb-2">MoneySave Jr - AI-Enhanced Financial Literacy Interface</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Built an interactive learning interface enhanced through <strong>prompt engineering</strong> and frontend development to simulate AI-assisted learning experiences for young users.
+      </p>
+      <ul class="text-sm text-gray-500 space-y-1 mb-3">
+        <li>• Applied prompt engineering to structure educational content</li>
+        <li>• Built UI using HTML, CSS, and JavaScript</li>
+        <li>• Developed and deployed using VS Code and GitHub</li>
+      </ul>
+      <a href="https://yamkela4458.github.io/MoneySave-Jr/" target="_blank" class="text-sm underline">View Live Website</a>
+    </div>
 
-<div class="project-card">
+       <!-- Project 3 -->
+    <div class="p-6 border rounded-xl card-hover">
+       <img src="images/677afa38a081c11f06aab387f3ccaa38.jpg" width="200" class="rounded-lg mb-4">
+      <h3 class="font-medium mb-2">The Academic - Research Resource Platform</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        A digital research platform designed to help students discover academic resources through a clean and accessible interface.
+      </p>
+      <ul class="text-sm text-gray-500 space-y-1">
+        <li>• Developed using semantic HTML and JavaScript.</li>
+        <li>• Implemented responsive layouts for mobile and desktop.</li>
+        <li>• Enhanced accessibility through structured navigation.</li>
+      </ul>
+      <a href="https://yamkela4458.github.io/TheAcademics/" target="_blank" class="text-sm underline">View</a>
+    </div>
 
-<img src="images/a8c6d68283173700c80254d1e16018ab.jpg" alt="MoneySave Jr">
-
-<h2>MoneySave Jr - Financial Literacy Interface</h2>
-
-<p>Designed a fun to use learning web interface to introduce young learners to financial literacy through interactive UI, Simple Mathematical calculations, 
-  and responsive learning elements.</p>
-
-<ul>
-<li>Implemented CSS animations and interactive transitions.</li>
-<li>Built responsive layouts using Flexbox and CSS Grid.</li>
-<li>Designed transparent UI components using RGBA overlays.</li>
-</ul>
-
-<a href="https://yamkela4458.github.io/MoneySave-Jr/" target="_blank">View Live Website</a>
-
-</div>
-
-<!-- Project 2 -->
-
-<div class="project-card">
-
-<img src="images/Screenshot 2026-01-12 043102.png">
-
-<h2>Practical English Communication Course</h2>
-
-<p>
-Designed a structured English communication course for adult learners focusing on 
-real-world workplace communication and scenario-based language practice.
-</p>
-
-<ul>
-
-<li>Developed structured modules using <b>Articulate Rise 360</b>.</li>
-<li>Applied adult learning principles in course design.</li>
-<li>Created UI prototypes and visual layouts using Figma.</li>
-
-</ul>
-
-<a href="https://share.articulate.com/xB0JcyUqGdLjsUMZyzQOU" target="_blank">View Course</a>
-
-</div>
-
-<!-- Project 3 -->
-
-<div class="project-card">
-
-<img src="images/Digital.png">
-
-<h2>Visual Learning Design</h2>
-
-<p>
-A sample of some of my academic and digital projects.
-</p>
-
-<ul>
-
-<li>Visual Learning Design: (Multimodal Video and teaching Material for Early learning)</li>
-<li>Digital Literacy Integration in language Education (Multimodal display of Identity)</li>
-<li>Lesson Plans</li>
-
-</ul>
-
-<a href="https://yamkela4458.github.io/Digital/" target="_blank">View Live Website</a>
-
-</div>
-
-<!-- Project 4 -->
-
-<div class="project-card">
-
-<img src="images/lesson-plan.jpg">
-
-<h2>Lesson Plans (Digital) demo</h2>
-
-<p>
-A sample of online lesson plans (IEB).
-</p>
-
-<ul>
-
-<li>Simple Lesson plan sample designed with HTML and CSS.</li>
-<li>Implemented responsive layouts for mobile and desktop.</li>
-<li>Enhanced accessibility through structured navigation.</li>
-
-</ul>
-
-<a href="https://yamkela4458.github.io/Digital/" target="_blank">View Live Website</a>
-
-</div>
-
-<!-- Project 5 -->
-
-<div class="project-card">
-
-<img src="images/677afa38a081c11f06aab387f3ccaa38.jpg">
-
-<h2>The Academic - Research Resource Platform</h2>
-
-<p>
-A digital research platform designed to help students discover academic resources 
-through a clean and accessible interface.
-</p>
-
-<ul>
-
-<li>Developed using semantic HTML and JavaScript.</li>
-<li>Implemented responsive layouts for mobile and desktop.</li>
-<li>Enhanced accessibility through structured navigation.</li>
-
-</ul>
-
-<a href="https://yamkela4458.github.io/TheAcademics/" target="_blank">View Live Website</a>
-
-</div>
-
-<!-- Project 6 -->
-
-<div class="project-card">
-
-<img src="images/NoteCraft.jpg">
-
-<h2>NoteCraft - Study Notes Web App</h2>
-
-<p>
-A lightweight productivity web app designed to help students capture and organise study notes efficiently.
-</p>
-
-<ul>
-
-<li>Built using Python (Flask), HTML, CSS, and JavaScript.</li>
-<li>Includes note creation, task lists, and a scribble pad.</li>
-<li>Autosave functionality using localStorage.</li>
-
-</ul>
-
-<a href="https://notes-xeod.onrender.com/" target="_blank">View Live Web App</a>
-
-</div>
-
-</div>
+    <!-- Project 4 -->
+    <div class="p-6 border rounded-xl card-hover">
+       <img src="images/NoteCraft.jpg" width="200" class="rounded-lg mb-4">
+      <h3 class="font-medium mb-2">NoteCraft - AI-Supported Study Notes Web App</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Developed a productivity web app integrating structured prompts and frontend systems to simulate AI-assisted note-taking workflows.
+      </p>
+      <ul class="text-sm text-gray-500 space-y-1 mb-3">
+        <li>• Built with Python (Flask), HTML, CSS, and JavaScript</li>
+        <li>• Designed structured prompts for note generation logic</li>
+        <li>• Version controlled and deployed using GitHub</li>
+      </ul>
+      <a href="https://notes-xeod.onrender.com/" target="_blank" class="text-sm underline">View Live Web App</a>
+    </div>
 
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<button class="text-sm px-8 py-3 rounded-full border border-black hover:bg-black hover:text-white transition">
+    <a href="https://yamkela4458.github.io/Digital/" class="nav-link">View More Work</a>
+</button>  
 
-<h2>Skills</h2>
-
-<ul>
-
-<li><strong>EdTech Tools:</strong> Articulate 360, Adobe Captivate, Moodle(LMS), Google Classroom, Zoom, Microsoft Teams</li>
-
-<li><strong>Development:</strong> HTML, CSS, JavaScript, Full-Stack Development Principles</li>
-
-<li><strong>AI Integration:</strong> AI Fluency Framework, Prompt Engineering, AI-supported learning design</li>
-
-<li><strong>Design:</strong> Figma, Canva, UI/UX Design for Education</li>
-
-<li><strong>Research:</strong> Digital literacy frameworks (Multimodal Learning Framework, New Literacies Theory)</li>
-
-</ul>
-
-</section>
-    
-<!-- Contact -->
-<section id="contact">
-    <h1>Contact Me</h1>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Type your message here.." rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul>
-        <strong>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="#projects">Projects</a></p>
-        <p><a href="about.html">About</a></p>
-        <p><a href="#contact">Contact</a></p>
-        </strong>
+<!-- EDUCATION -->
+<section id="education" class="py-24 px-6 max-w-5xl mx-auto fade-in">
+  <h2 class="text-2xl font-semibold text-center mb-12">Education</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="p-8 border rounded-xl card-hover">
+      <h3 class="font-medium mb-4">Degrees</h3>
+      <ul class="text-sm text-gray-600 space-y-2">
+         <li>B.Ed. Honours in Language, Literacies & Literature</li>
+        <b>University of Johannesburg</b>
+<br>
+        <li>Bachelor of Education (Foundation Phase Teaching)</li>
+        <b>Walter Sisulu University</b>
       </ul>
     </div>
-<br>
-
-    <div class="footer-section">
-      <h3>Let's Connect</h3>
-<br>
-      <ul class="social-links">
-        <p><a href="https://linkedin.com/in/yamkela-lusithi"> <img src="icons/LinkedIn_icon.svg.webp" width="50"></a></p>
-        <br>
-        <p><a href="mailto:lusithiyamkela@gmail.com"><img src="icons/gmail-icon-free-png.webp" width="50"></a></p> 
-        <br>
-        <p><a href="https://github.com/Yamkela4458"><img src="icons/github.png" width="80"></a></p>
-        <br>
+    <div class="p-8 border rounded-xl card-hover">
+      <h3 class="font-medium mb-4">Certifications</h3>
+      <ul class="text-sm text-gray-600 space-y-2">
+        <li>Advanced Prompt Engineering with ChatGPT - upGrad</li>
+        <li>CS205: Building with Artificial Intelligence - Saylor University</li>
+        <li>Teaching the AI Fluency Framework - Anthropic</li>
+        <li>AI (Artificial Intelligence) in the 4IR - University of Johannesburg</li>
+        <li>CS302: Software Engineering - Saylor University</li>
+        <li> Certificate in Full Stack Development - FNB App Academy</li>
+        <li> Accessible E-learning in Articulate 360 - LinkedIn Learning</li>
+        <li> Adobe Captivate: Extending with JavaScript - LinkedIn Learning</li>
+        <li> Digital Skills: Succeeding in a Digital World - The Open University (badge)</li>
+        <li>Teaching English as a Foreign Language Course (120-Hours) - Teacher Record</li>
+        <li>SACE Registration (13001838) - South African Council for Educators</li>
       </ul>
     </div>
   </div>
+</section>
 
-    <div class="footer-bottom">
-      <p> &copy; 2026 Digital Portfolio | Yamkela Lusithi. All rights reserved.</p>
-    </div>
-  </footer>
-</div>
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t bg-gray-50">
+  <h3 class="mb-4 font-medium">Connect</h3>
+  <div class="flex justify-center gap-8 mb-4 text-sm">
+    <a href="https://linkedin.com/in/yamkela-lusithi" class="hover:underline"><img src="images/LinkedIn_icon.svg.webp" width="50"></a>
+    <a href="mailto:lusithiyamkela@gmail.com" class="hover:underline"><img src="images/gmail-icon-free-png.webp" width="50"></a>
+    <a href="https://github.com/Yamkela4458" class="hover:underline"><img src="images/GitHub-logo.png" width="60"></a>
+  </div>
+  <p class="text-xs text-gray-400">&copy; 2026 Lusithi Yamkela | All rights reserved.</p>
+</footer>
 
-<script src="script.js"></script>
+<script>
+const text = "Digital Learning Development | Language Education | AI in Education";
+let i = 0;
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 40);
+  }
+}
+typeEffect();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 50) {
+    header.classList.add('py-2','shadow-sm');
+    header.classList.remove('py-4');
+  } else {
+    header.classList.add('py-4');
+    header.classList.remove('py-2','shadow-sm');
+  }
+});
+</script>
 
 </body>
 </html>
