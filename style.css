@@ -1,44 +1,149 @@
 /* HTML */
-    html { 
-        scroll-behavior: smooth; 
-    }
-    .glass { backdrop-filter: blur(10px); 
-        background: rgba(255,255,255,0.9); 
-    }
-    .card-hover:hover { 
-        transform: translateY(-6px); 
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
-    }
-    .fade-in { 
-        opacity:0; 
-        transform: translateY(20px); 
-        transition: all .7s ease; 
-    }
-    .fade-in.show { 
-        opacity:1; 
-        transform: translateY(0); 
-    }
-    .nav-link { 
-        position:relative; 
-    }
-    .nav-link::after { 
-        content:""; 
-        position:absolute; 
-        left:0; bottom:-4px; 
-        width:0; height:2px; 
-        background:#111827; 
-        transition:.3s; 
-    }
-    .nav-link:hover::after { 
-        width:100%; 
-    }
-    .logo-box { 
-        width:32px; 
-        height:32px; 
-        border:2px solid #111; 
-        display:flex; 
-        align-items:center; 
-        justify-content:center; 
-        font-size:12px; 
-        font-weight:bold; 
-    }
+:root {
+    --primary: #111827;
+    --accent: #ef5108; 
+    --bg-light: #f8fafc;
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --transition-standard: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* --- STYLE --- */
+html { 
+    scroll-behavior: smooth;
+    font-family: var(--font-main);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- UTILITIES --- */
+.glass { 
+    backdrop-filter: blur(12px); 
+    background: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* --- ANIMATIONS --- */
+.card-hover {
+    transition: var(--transition-standard);
+    border: 1px solid #e2e8f0;
+}
+
+.card-hover:hover { 
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
+}
+
+/* Intersection Classes */
+.fade-in { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: var(--transition-standard);
+    will-change: transform, opacity;
+}
+
+.fade-in.show { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* --- NAVIGATION --- */
+.nav-link { 
+    position: relative;
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.nav-link::after { 
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: -6px; 
+    width: 0; 
+    height: 2px; 
+    background: var(--accent); 
+    transition: width 0.3s ease; 
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link:hover::after { 
+    width: 100%; 
+}
+
+/* --- LOGO --- */
+.logo-box { 
+    width: 40px; 
+    height: 40px; 
+    background: var(--primary);
+    color: white;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: 800; 
+    border-radius: 8px;
+    letter-spacing: -1px;
+    transition: var(--transition-standard);
+}
+
+.logo-box:hover {
+    background: var(--accent);
+    transform: rotate(-5deg);
+}
+
+/* --- EDTECH --- */
+.badge-tech {
+    background: #eff6ff;
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #dbeafe;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* hover */
+.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
