@@ -1,32 +1,242 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
-    <body>
-<h2>Project Title: Workplace Communication Module | Articulate Rise 360 Case Study</h2>
+<title>Workplace Communication Module | Case Study</title>
 
-<h3><i>The Challenge</i></h3>
-<p>In modern workplace environments, ineffective communication remains a leading cause of conflict, reduced productivity, and misunderstandings. Adult learners often struggle to transfer theoretical communication knowledge into real-world professional contexts, particularly when training lacks relevance, interactivity, and practical application.</p>
+<script src="https://cdn.tailwindcss.com"></script>
 
-<h3><i>The Solution</i></h3>
-<p>I designed a high-fidelity, scenario-based eLearning module using Articulate Rise 360. The course focuses on authentic workplace situations, allowing learners to engage in decision-making tasks that mirror real communication challenges. The module supports learners in developing practical communication strategies through guided interaction and immediate feedback.</p>
+<style>
+:root {
+  --primary: #111827;
+  --accent: #deb887;    
+  --accent-dark: #c49a6c;   
+  --accent-soft: #f5e6d3;   
+}
 
-<h3><i>Instructional Design Strategy</i></h3>
-<ul>
-    <li><b>Adult Learning Principles (Andragogy):</b> The module is grounded in relevance and real-world application, ensuring learners can immediately connect content to workplace experiences.</li>
-    <li><b>Scenario-Based Learning:</b> Learners engage with realistic communication dilemmas, promoting active problem-solving and deeper cognitive processing.</li>
-    <li><b>Bloom's Taxonomy Alignment:</b> The course progresses from Understanding (communication concepts) to Applying (selecting appropriate responses) and Evaluating (reflecting on outcomes and effectiveness).</li>
-    <li><b>Cognitive Load Management:</b> Content is segmented into short, focused sections with interactive checkpoints to maintain engagement and prevent overload.</li>
-    <li><b>Feedback-Driven Learning:</b> Immediate, contextual feedback is provided to reinforce correct decisions and guide learners toward improved communication strategies.</li>
-</ul>
+/* Section Titles */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
 
-<h3><i>Tools Used</i></h3>
-<ul>
-    <li><b>Articulate Rise 360:</b> For responsive course design and interactive content development.</li>
-    <li><b>Scenario-Based Instructional Design:</b> For creating realistic, decision-driven learning experiences.</li>
-    <li><b>Adult Learning Theory:</b> To ensure relevance, autonomy, and practical application.</li>
-</ul>
-    </body>
-    </html>
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  margin-top: 6px;
+}
+
+/* Badge */
+.badge {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #111827;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: var(--accent);
+}
+
+/* Button */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+/* Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Box */
+.highlight {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent-dark);
+  padding: 16px;
+  border-radius: 8px;
+}
+</style>
+
+</head>
+
+<body class="bg-slate-50 text-gray-900">
+
+<section class="max-w-4xl mx-auto px-6 py-16">
+
+  <!-- HEADER -->
+  <header class="mb-14 fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
+      Workplace Communication Module
+    </h1>
+
+    <p class="text-gray-600 text-lg">
+      A scenario-based eLearning experience designed to improve real-world communication skills using interactive decision-making.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mt-6">
+      <span class="badge">Articulate Rise 360</span>
+      <span class="badge">Instructional Design</span>
+      <span class="badge">Scenario-Based Learning</span>
+      <span class="badge">Adult Learning</span>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Overview</h2>
+
+    <div class="highlight">
+      This project bridges the gap between theoretical communication knowledge and real-world application through interactive learning.
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">The Challenge</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Workplace communication failures often result in conflict and inefficiency. Traditional training lacks realism, making it difficult for learners to apply knowledge in real situations.
+    </p>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">The Solution</h2>
+    <p class="text-gray-700 leading-relaxed">
+      I developed a scenario-based module using Articulate Rise 360, allowing learners to engage with realistic workplace situations, make decisions, and receive immediate feedback.
+    </p>
+  </section>
+
+  <!-- ROLE -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">My Role</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card">Instructional Design</div>
+      <div class="card">Scenario Mapping</div>
+      <div class="card">Content Structuring</div>
+      <div class="card">Course Development</div>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Instructional Strategy</h2>
+
+    <div class="space-y-4">
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Adult Learning</h3>
+        <p>Real-world relevance ensures immediate application.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Scenario-Based Learning</h3>
+        <p>Interactive dilemmas promote deeper engagement.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Bloom's Taxonomy</h3>
+        <p>Progression from understanding to evaluation.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Cognitive Load</h3>
+        <p>Segmented content improves retention and focus.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Feedback System</h3>
+        <p>Immediate feedback reinforces learning decisions.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Learning Outcomes</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card">Apply communication strategies</div>
+      <div class="card">Evaluate communication effectiveness</div>
+      <div class="card">Make informed decisions</div>
+      <div class="card">Reflect on outcomes</div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Tools & Technologies</h2>
+
+    <div class="flex flex-wrap gap-3">
+      <span class="badge">Articulate Rise 360</span>
+      <span class="badge">Instructional Design</span>
+      <span class="badge">Scenario Design</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center mt-16 fade-in">
+    <a href="https://share.articulate.com/xB0JcyUqGdLjsUMZyzQOU" class="btn-primary">Launch Course →</a>
+  </section>
+
+</section>
+
+<script>
+// Fade-in animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
