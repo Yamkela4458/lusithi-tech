@@ -2,6 +2,7 @@
 :root {
     --primary: #111827;
     --accent: #ef5108; 
+    --accent-soft: #eff6ff;
     --bg-light: #f8fafc;
     --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     --transition-standard: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -146,4 +147,119 @@ body {
 .grayscale:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+
+/* Gradient fade edges */
+.gradient-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gradient-edge.left {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.gradient-edge.right {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+/* Marquee container */
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track */
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-fast 10s linear infinite;
+}
+
+/* loop */
+.marquee-track::after {
+  content: "";
+  display: flex;
+}
+
+/* smooth animation */
+@keyframes scroll-fast {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Tech items */
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.65;
+  font-size: 0.95rem;
+  font-weight: 730;
+  color: #6b7280;
+  transition: all 0.4s ease;
+  will-change: transform;
+}
+
+.tech-item i {
+  font-size: 28px;
+}
+
+.tech-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Hover */
+.tech-item:hover {
+  opacity: 1;
+  transform: translateY(-4px) scale(1.05);
+  color: #111827;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+
+/* Forms */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+.btn-secondary {
+  border: 1px solid black;
+  padding: 12px 24px;
+  border-radius: 999px;
+}
+.btn-secondary:hover {
+  background: var(--accent-soft);
 }
