@@ -1,32 +1,239 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
-    <body>
-        <h2>Project Title: Digital Scaffolding for Financial Literacy | Capitec Speculative Case Study</h2>
-        <h3><i>The Challenge</i></h3>
-        <p>For non-bank customers, applying for credit can be a high-anxiety process filled with information overload 
-         and complex compliance requirements. In a fast-paced retail banking environment like Capitec's, learners (the customers) need a support system that reduces cognitive load and prevents application errors before they reach the branch.</p>
+<title>Digital Scaffolding for Financial Literacy | Case Study</title>
 
-        <h3><i>The Solution</i></h3>
-        <p>I designed a high-fidelity, 8-step visual job aid using Canva, aimed at simplifying the credit acquisition journey. The project serves as a bridge for the learner, moving them from passive interest to active, prepared application through clear Digital Scaffolding.</p>
+<script src="https://cdn.tailwindcss.com"></script>
 
-        <h3><i>Instructional Design Strategy</i></h3>
-        <ul>
-            <li><b>Bloom's Taxonomy Alignment:</b> The aid is structured to move the user from Understanding (eligibility and requirements) to Applying (navigating the estimate tool and branch visit) and finally Evaluating (selecting a personalized offer).</li>
-            <li><b>Cognitive Load Management:</b> Information is chunked into manageable steps to prevent learner burnout. Each step uses a clear action title to maintain momentum.</li>
-            <li><b>Visual Hierarchy:</b> Utilizing Capitec's brand identity (Navy Blue and Red), I prioritized high-contrast headings and iconography to ensure the guide is scannable in under 10 seconds, a critical requirement for mobile-first users.</li>
-            <li><b>User-Centric Tone:</b> The language was translated from Bank-Speak into plain, accessible English to align with Capitec's core brand value of simplicity.</li>
-        </ul>
+<style>
+:root {
+  --primary: #1f2933;
+  --accent: #e8d8c3;       
+  --accent-dark: #d6c2a8;   
+  --accent-soft: #f7efe5;   
+}
 
-        <h3><i>Tools Used</i></h3>
-        <ul>
-            <li><b>Canva:</b> For graphic layout and brand-aligned visual design.</li>
-            <li><b>Instructional Design Principles:</b> Scaffolding, Bloom's Taxonomy, and Minimalism.</li>
-            </li>
-        </ul>
+/* Section Titles */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
 
-    </body>
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: var(--accent-dark);
+  display: block;
+  margin-top: 6px;
+}
+
+/* Badge */
+.badge {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #1f2933;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: var(--accent-dark);
+}
+
+/* Button */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  color: #1f2933;
+  transform: translateY(-2px);
+}
+
+/* Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Highlight */
+.highlight {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent-dark);
+  padding: 16px;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body class="bg-[#faf6f0] text-gray-900">
+
+<section class="max-w-4xl mx-auto px-6 py-16">
+
+  <!-- HEADER -->
+  <header class="mb-14 fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
+      Digital Scaffolding for Financial Literacy
+    </h1>
+
+    <p class="text-gray-600 text-lg">
+      A visual job aid designed to simplify the credit application process for first-time banking customers.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mt-6">
+      <span class="badge">Canva</span>
+      <span class="badge">Instructional Design</span>
+      <span class="badge">Scaffolding</span>
+      <span class="badge">Financial Literacy</span>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Overview</h2>
+
+    <div class="highlight">
+      This project reduces anxiety and cognitive overload by guiding users step-by-step through the credit application journey.
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">The Challenge</h2>
+    <p class="text-gray-700 leading-relaxed">
+      For non-bank customers, applying for credit can be overwhelming due to complex requirements and unfamiliar processes. 
+      Without structured guidance, users are more likely to make errors or abandon the process altogether.
+    </p>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">The Solution</h2>
+    <p class="text-gray-700 leading-relaxed">
+      I designed an 8-step visual job aid using Canva, structured to guide users from initial understanding to confident application. 
+      The solution uses digital scaffolding to break down complexity into manageable, actionable steps.
+    </p>
+  </section>
+
+  <!-- ROLE -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">My Role</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card">Instructional Design</div>
+      <div class="card">Content Simplification</div>
+      <div class="card">Visual Design</div>
+      <div class="card">User Experience Structuring</div>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Instructional Design Strategy</h2>
+
+    <div class="space-y-4">
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Bloom's Taxonomy</h3>
+        <p>Progression from understanding requirements to evaluating loan options.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Cognitive Load Management</h3>
+        <p>Information is chunked into clear steps to prevent overload and confusion.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">Visual Hierarchy</h3>
+        <p>Strong headings and icons enable users to scan and act quickly.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="font-bold mb-2">User-Centric Language</h3>
+        <p>Complex banking terminology simplified into clear, accessible English.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">User Outcomes</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card">Reduced application anxiety</div>
+      <div class="card">Improved process understanding</div>
+      <div class="card">Fewer application errors</div>
+      <div class="card">Faster decision-making</div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="mb-12 fade-in">
+    <h2 class="section-title">Tools & Methods</h2>
+
+    <div class="flex flex-wrap gap-3">
+      <span class="badge">Canva</span>
+      <span class="badge">Scaffolding</span>
+      <span class="badge">Bloom's Taxonomy</span>
+      <span class="badge">Minimalist Design</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center mt-16 fade-in">
+    <a href="https://canva.link/c65jllzzkop2koe" class="btn-primary">View Infographic→</a>
+  </section>
+
+</section>
+
+<script>
+// Fade-in animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+</script>
+
+</body>
 </html>
